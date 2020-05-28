@@ -1,7 +1,6 @@
 var exphbs = require("express-handlebars");
 var express = require("express");
 var mysql = require("mysql");
-
 var app = express();
 
 // Set the port of our application
@@ -81,7 +80,6 @@ app.put("/api/burgers/:id", function(req, res) {
         return res.status(404).end();
       }
       res.status(200).end();
-
     }
   );
 });
