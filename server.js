@@ -50,9 +50,6 @@ app.get("/", function(req, res) {
   });
 });
 
-
-
-
 app.post("/api/burgers", function(req, res) {
   connection.query("INSERT INTO burgers (burgername) VALUES (?)", [req.body.burgername], function(
     err,
@@ -67,7 +64,6 @@ app.post("/api/burgers", function(req, res) {
     res.json({ id: result.insertId });
   });
 });
-
 
 // Update a burger by an id and then redirect to the root route.
 app.put("/api/burgers/:id", function(req, res) {
